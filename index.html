@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript 7 Tasks </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">JS Tasks Portal</div>
+            <ul class="nav-links">
+                <li><a href="#task1">Age to Days</a></li>
+                <li><a href="#task2">Hours to Seconds</a></li>
+                <li><a href="#task3">Next Number</a></li>
+                <li><a href="#task4">Capitalize Name</a></li>
+                <li><a href="#task5">BMI Calculator</a></li>
+                <li><a href="#task6">Array Picker</a></li>
+                <li><a href="#task7">Auto Addition</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="container">
+
+        <section id="task1" class="task-card">
+            <h2>Age to Days Converter</h2>
+            <p>Enter your age in years to convert it into days:</p>
+            <input type="number" id="ageInput" placeholder="Enter age (e.g., 20)">
+            <button onclick="convertAgeToDays()">Convert to Days</button>
+            <div id="result1" class="result"></div>
+        </section>
+
+        <section id="task2" class="task-card">
+            <h2>Hours to Seconds Converter</h2>
+            <p>Enter hours to convert into seconds:</p>
+            <input type="number" id="hoursInput" placeholder="Enter hours (e.g., 2)">
+            <button onclick="convertHoursToSeconds()">Convert to Seconds</button>
+            <div id="result2" class="result"></div>
+        </section>
+
+        <section id="task3" class="task-card">
+            <h2>Next Number Finder</h2>
+            <p>Enter an integer to find the next number:</p>
+            <input type="number" id="numberInput" placeholder="Enter number (e.g., 5)">
+            <button onclick="findNextNumber()">Find Next</button>
+            <div id="result3" class="result"></div>
+        </section>
+
+        <section id="task4" class="task-card">
+            <h2>Name Capitalizer</h2>
+            <p>Enter a name to capitalize the first letter:</p>
+            <input type="text" id="nameInput" placeholder="Enter name (e.g., jani)">
+            <button onclick="capitalizeName()">Capitalize</button>
+            <div id="result4" class="result"></div>
+        </section>
+
+        <section id="task5" class="task-card">
+            <h2>Perfect BMI Calculator</h2>
+            <p>Enter Weight and Height:</p>
+            <input type="number" id="weight" placeholder="Weight in KG (e.g., 60)" step="any">
+            <div class="row">
+                <input type="number" id="feet" placeholder="Feet (e.g., 5)" min="0">
+                <input type="number" id="inches" placeholder="Inches (e.g., 10)" min="0" max="11">
+            </div>
+            <button onclick="calculateBMI()">Calculate BMI</button>
+            <div id="result5" class="result"></div>
+        </section>
+
+        <section id="task6" class="task-card">
+            <h2>Random Array Picker</h2>
+            <p>Generate an array and pick the 1st and last element:</p>
+            <button onclick="handleArrayTask()">Generate & Pick</button>
+            <div id="result6" class="result" style="text-align: left; background: #f8f9fa; padding: 15px; border-radius: 5px; display: none;"></div>
+        </section>
+
+        <section id="task7" class="task-card">
+            <h2>Live Auto-Addition (Event Handling)</h2>
+            <p>Type numbers to see event handling in action:</p>
+            <input type="text" id="num1" placeholder="First integer" oninput="addNumbers()">
+            <input type="text" id="num2" placeholder="Second integer" oninput="addNumbers()">
+            <div style="margin-top: 15px; font-weight: bold; text-align: left; color: #333;">Result Box:</div>
+            <input type="text" id="resultAddition" placeholder="Result" readonly style="background-color: #e9ecef; font-weight: bold;">
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
