@@ -76,16 +76,16 @@ function calculateBMI() {
     let color = "";
 
     if (bmi < 18.5) {
-        status = "Underweight (Gain your weight!) 🦴";
+        status = "Underweight (Gain your weight!) ";
         color = "#dc3545";
     } else if (bmi >= 18.5 && bmi <= 24.9) {
-        status = "Normal (Maintain your weight!) ✅";
+        status = "Normal (Maintain your weight!) ";
         color = "#28a745";
     } else if (bmi >= 25 && bmi <= 29.9) {
-        status = "Overweight (Lose your weight!) ⚠️";
+        status = "Overweight (Lose your weight!) ";
         color = "#fd7e14";
     } else {
-        status = "Obese (Dangerously Overweight! Lose your weight!) 🚨";
+        status = "Obese (Dangerously Overweight! Lose your weight!) ";
         color = "#721c24";
     }
 
