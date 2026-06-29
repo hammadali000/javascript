@@ -50,7 +50,20 @@ function capitalizeName() {
         resultDiv.style.color = "red";
         return;
     }
-    let capitalized = name.charAt(0).toUpperCase() + name.slice(1);
+    let words = name.split(' ');
+    if (words.length === 1) {
+        words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
+    } else {
+        words[0] = words[0].charAt(0).toUpperCase() + words[0].slice(1).toLowerCase();
+        
+        for (let i = 1; i < words.length - 1; i++) {
+            words[i] = words[i].toLowerCase();
+        }
+        
+        let lastIndex = words.length - 1;
+        words[lastIndex] = words[lastIndex].charAt(0).toUpperCase() + words[lastIndex].slice(1).toLowerCase();
+    }
+    let capitalized = words.join(' ');
     resultDiv.innerText = `Capitalized Name: ${capitalized}`;
     resultDiv.style.color = "#28a745";
 }
